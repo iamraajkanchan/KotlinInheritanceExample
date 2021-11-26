@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
     val squareCabin = SquareCabin(5)
     val roundHut = RoundHut(8)
     val roundTower = RoundTower(15, 6)
-    val dwellings = Dwellings(2)
+    // val dwellings = Dwellings(2)
 
     with(squareCabin) {
         println("...................................................")
@@ -67,11 +67,11 @@ fun main(args: Array<String>) {
 }
 
 open class Dwellings(resident: Int) {
-    var buildingMaterial: String = ""
+    lateinit var buildingMaterial: String
     var capacity: Int = 0
-    var name: String = ""
-    var charges: Double = 0.00
     var resident: Int = 0
+    lateinit var name: String
+    var charges: Double = 0.00
 
     init {
         this.resident = resident
